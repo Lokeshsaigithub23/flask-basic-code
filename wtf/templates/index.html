@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>registration form</h1>
+    <form method="post">
+        {{form.hidden_tag()}}
+        {{form.username.label}}{{form.username}}
+        {{form.password.label}}{{form.password}}
+        {{form.email.label}}{{form.email}}
+        {{form.bio.label}}{{form.bio}}
+        {{form.phone_number.label}}{{form.phone_number}}
+        <div class="group-labelgroup ">
+            {% for i in form.gender %}
+               {{i}}{{i.label}}
+            {% endfor %}   
+        </div>   
+        {{form.course.label}}{{form.course}}
+        {{form.birthdate.label}}{{form.birthdate}}
+        <div class="group_label">
+            {{form.subscribe.label}}{{form.subscribe}}
+        </div>
+        {{form.submit()}}
+    </form>
+</body>
+</html>
