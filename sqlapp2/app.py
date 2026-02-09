@@ -13,5 +13,6 @@ class User(db.Model):
     email=db.Column(db.String(100))
     date_joined=db.Column(db.Date,default=datetime.utcnow)
     
-if __name__=="__main__":
+if __name__=="__main__":   # help in runing code#
     app.run(debug=True)
+    
